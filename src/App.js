@@ -1,6 +1,7 @@
 import React,{useEffect,useState} from 'react'
 import Weather from './components/Weather.js'
 import { Dimmer, Loader } from 'semantic-ui-react';
+import Skeleton from '@material-ui/lab/Skeleton';
 
 function App() {
   const [lat, setLat] = useState([]);
@@ -30,8 +31,10 @@ function App() {
       ): (
         <div>
           <Dimmer active>
-            <Loader>Loading..</Loader>
+            <Loader>Loading....please wait</Loader>
           </Dimmer>
+          {/* <Skeleton variant="rect"  height={400}/> */}
+
        </div>
      )}
  </div>
